@@ -15,9 +15,11 @@ cp .gitconfig $HOME/
 
 # os
 case ${OSTYPE} in
-    darwin*)
-	source darwin/install.zsh
-        ;;
-    linux*)  
-        ;;
+  darwin*)
+    source darwin/install.zsh
+    source install_rbenv.zsh
+    ;;
+  linux*)  
+    ;;
 esac
+source install_rbenv.zsh
