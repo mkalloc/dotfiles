@@ -5,3 +5,4 @@ export SHELL_HOME=$HOME/.sh.d
 ln -s .sh.d $HOME/.sh.d
 ln -s .zshrc $HOME/.zshrc
 mkdir $SHELL_HOME/temp
+cp .gitconfig $HOME/
