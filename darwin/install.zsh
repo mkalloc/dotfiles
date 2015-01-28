@@ -23,3 +23,7 @@ brew install openssl
 if hasCmd 'wget'; then
   brew install wget
 fi
+
+if hasCmd 'git'; then
+  brew install git
+fi
