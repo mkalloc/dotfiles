@@ -1,5 +1,11 @@
 #!/usr/bin/env zsh
 
+# func
+hasCmd(){
+  [ -e "$(which $1 2> /dev/null)" ]
+}
+
+
 export SHELL_HOME=$HOME/.sh.d
 # set static file
 ln -s .sh.d $HOME/.sh.d
