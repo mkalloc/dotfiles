@@ -4,7 +4,7 @@ java -version
 
 # notice gcc
 ###################################################
-if [ -e $(which gcc 2> /dev/null) ]; then
+if hasCmd 'gcc'; then
 
 else
   echo "you must install xcode from appstore"
@@ -12,6 +12,7 @@ fi
 
 # install brew
 ###################################################
-if [ -e $(which brew 2> /dev/null) ]; then
+if hasCmd 'brew'; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
+
