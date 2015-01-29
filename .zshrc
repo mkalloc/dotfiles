@@ -17,6 +17,10 @@ sources (){
   done
 }
 
+# os dependence
+###################################################
+sources $SHELL_HOME/os/*.zsh
+
 # option
 ###################################################
 sources $SHELL_HOME/option/*.zsh
