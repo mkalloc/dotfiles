@@ -13,7 +13,7 @@ fi
 # install brew
 ###################################################
 if hasCmd 'brew'; then
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  source darwin/install_brew.zsh
 fi
 
 # brew package
