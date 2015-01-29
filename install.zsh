@@ -6,8 +6,8 @@ hasCmd(){
 }
 
 absPath(){
-  path=$(cd $(dirname $1) && pwd)
-  echo "${path%/}/$(basename $1)"
+  abspath=$(cd $(dirname $1) && pwd)
+  echo ${abspath%/}/$(basename $1)
 }
 
 # install dir
