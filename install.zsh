@@ -25,4 +25,3 @@ case ${OSTYPE} in
   linux*)  
     ;;
 esac
-source install_rbenv.zsh
