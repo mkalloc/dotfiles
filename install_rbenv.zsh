@@ -15,4 +15,4 @@ else
   export PATH=RBENV_HOME/shims:$PATH
   gem install bundler
   rbenv rehash
-end
+fi
