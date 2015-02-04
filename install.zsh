@@ -2,7 +2,7 @@
 
 # func
 hasCmd(){
-  [ -e "$(which $1 2> /dev/null)" ]
+  [ "$(whence $1 2> /dev/null)" ]
 }
 
 absPath(){
@@ -12,15 +12,18 @@ absPath(){
 
 # install dir
 ###################################################
-mkdir $HOME/bin
 export BIN_HOME=$HOME/bin
 export SHELL_HOME=$HOME/.sh.d
+export COMPLETION_HOME=$SHELL_HOME/completions
 
 # set static file
-ln -s $(absPath .sh.d) $HOME/.sh.d
-ln -s $(absPath .zshrc) $HOME/.zshrc
+mkdir $BIN_HOME
+ln -s $(absPath .sh.d) $HOME
+ln -s $(absPath .zshrc) $HOME
 mkdir $SHELL_HOME/temp
-cp .gitconfig $HOME/
+mkdir $COMPLETION_HOME
+mkdir $SHELL_HOME/export
+cp -u .gitconfig $HOME/
 
 # os
 case ${OSTYPE} in
