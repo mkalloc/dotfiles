@@ -31,13 +31,12 @@ _source $SHELL_HOME/option/*.zsh
 
 # alias
 ###################################################
-_source $HOME/.sh.d/alias/*.zsh
+_source $SHELL_HOME/alias/*.zsh
 
 # sh
 ###################################################
-_source $HOME/.sh.d/script/*.zsh
+_source $SHELL_HOME/script/*.zsh
 
-# rbenv
+# ohter
 ###################################################
-source $RBENV_HOME/completions/rbenv.zsh
-eval "$(rbenv init -)"
+_source $SHELL_HOME/other_sources/*.zsh
