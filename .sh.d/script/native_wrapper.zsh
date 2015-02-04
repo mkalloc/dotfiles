@@ -1,6 +1,6 @@
 go-trash(){
   if [ -e $1 ]; then
-    mv $1 $HOME/.Trash
+    mv -f $1 $HOME/.Trash/
   fi
 }
 

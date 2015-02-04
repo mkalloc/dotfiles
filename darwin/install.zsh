@@ -18,12 +18,17 @@ fi
 
 # brew package
 ###################################################
-brew install openssl
+formula=(openssl autoconf automake)
 
 if hasCmd 'wget'; then
-  brew install wget
+  formula+=(wget)
 fi
 
 if hasCmd 'git'; then
-  brew install git
+  formula+=(git)
 fi
+
+for f in $formula
+do
+  brew install $f
+done
