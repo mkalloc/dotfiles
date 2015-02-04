@@ -2,7 +2,7 @@
 
 # func
 hasCmd(){
-  [ -e "$(which $1 2> /dev/null)" ]
+  [ "$(whence $1 2> /dev/null)" ]
 }
 
 absPath(){
