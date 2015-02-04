@@ -17,6 +17,10 @@ _source (){
   done
 }
 
+# export
+###################################################
+_source $SHELL_HOME/export
+
 # os dependence
 ###################################################
 _source $SHELL_HOME/os/*.zsh
