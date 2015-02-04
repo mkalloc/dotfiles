@@ -6,7 +6,8 @@ else
   export PATH=$RBENV_HOME/bin:$PATH
   git clone https://github.com/sstephenson/rbenv.git $RBENV_HOME
   git clone https://github.com/sstephenson/ruby-build.git $RBENV_HOME/plugins/ruby-build
-
+  ln -s $RBENV_HOME/completions/rbenv.zsh $SHELL_HOME/completions
+  echo 'eval "$(rbenv init -)"' > $SHELL_HOME/other_sources/rbenv.zsh
 # install ruby
 ###################################################
   rbenv install 2.2.0
