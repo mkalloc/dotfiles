@@ -15,12 +15,14 @@ absPath(){
 mkdir $HOME/bin
 export BIN_HOME=$HOME/bin
 export SHELL_HOME=$HOME/.sh.d
+export COMPLETION_HOME=$SHELL_HOME/completions
 
 # set static file
 ln -s $(absPath .sh.d) $HOME/.sh.d
 ln -s $(absPath .zshrc) $HOME/.zshrc
 mkdir $SHELL_HOME/temp
-cp .gitconfig $HOME/
+mkdir $COMPLETION_HOME
+cp -u .gitconfig $HOME/
 
 # os
 case ${OSTYPE} in
