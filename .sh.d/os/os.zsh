@@ -1,6 +1,6 @@
 case ${OSTYPE} in
   darwin*)
-    _source $SHELL_HOME/os/darwin/*.zsh
+    msource $SHELL_HOME/os/darwin/*.zsh
   ;;
   linux*)  
   ;;

@@ -10,7 +10,7 @@ export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46
 
 # import
 ###################################################
-_source (){
+msource (){
   for s in $*
   do
     source $s
@@ -19,24 +19,24 @@ _source (){
 
 # export
 ###################################################
-_source $SHELL_HOME/export
+msource $SHELL_HOME/export
 
 # os dependence
 ###################################################
-_source $SHELL_HOME/os/*.zsh
+msource $SHELL_HOME/os/*.zsh
 
 # option
 ###################################################
-_source $SHELL_HOME/option/*.zsh
+msource $SHELL_HOME/option/*.zsh
 
 # alias
 ###################################################
-_source $SHELL_HOME/alias/*.zsh
+msource $SHELL_HOME/alias/*.zsh
 
 # sh
 ###################################################
-_source $SHELL_HOME/script/*.zsh
+msource $SHELL_HOME/script/*.zsh
 
 # ohter
 ###################################################
-_source $SHELL_HOME/other_sources/*.zsh
+msource $SHELL_HOME/other_sources/*.zsh
