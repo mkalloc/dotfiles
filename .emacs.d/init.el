@@ -12,6 +12,7 @@
 (defvar installing-package-list
   '(
     init-loader
+    auto-complete
         ))
 
 (let ((not-installed (loop for x in installing-package-list
