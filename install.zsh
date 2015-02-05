@@ -18,11 +18,11 @@ export COMPLETION_HOME=$SHELL_HOME/completions
 
 # set static file
 mkdir $BIN_HOME
-ln -s $(absPath .sh.d) $HOME
-ln -s $(absPath .zshrc) $HOME
-ln -s $(absPath .tmux.conf) $HOME
-ln -s $(absPath .emacs) $HOME
-ln -s $(absPath .emacs.d) $HOME
+ln -fbs $(absPath .sh.d) $HOME
+ln -fbs $(absPath .zshrc) $HOME
+ln -fbs $(absPath .tmux.conf) $HOME
+ln -fbs $(absPath .emacs) $HOME
+ln -fbs $(absPath .emacs.d) $HOME
 mkdir $SHELL_HOME/temp
 mkdir $COMPLETION_HOME
 mkdir $SHELL_HOME/export
