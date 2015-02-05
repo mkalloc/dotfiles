@@ -22,6 +22,7 @@ fi
 # install brew
 ###################################################
 if hasCmd 'brew'; then
+else
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
