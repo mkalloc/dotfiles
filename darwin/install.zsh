@@ -31,6 +31,7 @@ formula=(openssl autoconf automake)
 formula+=($(installable wget))
 formula+=($(installable git))
 formula+=($(installable tmux))
+formula+=($(installable reattach-to-user-namespace))
 
 for f in $formula
 do
