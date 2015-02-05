@@ -28,14 +28,9 @@ fi
 # brew package
 ###################################################
 formula=(openssl autoconf automake)
-
-if hasCmd 'wget'; then
-  formula+=(wget)
-fi
-
-if hasCmd 'git'; then
-  formula+=(git)
-fi
+formula+=($(installable wget))
+formula+=($(installable git))
+formula+=($(installable tmux))
 
 for f in $formula
 do
