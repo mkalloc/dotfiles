@@ -1,3 +1,12 @@
+# func
+###################################################
+installable(){
+  if hasCmd $1; then
+  else
+    echo "$1"
+  fi
+}
+
 # install java
 ###################################################
 java -version
@@ -13,20 +22,17 @@ fi
 # install brew
 ###################################################
 if hasCmd 'brew'; then
+else
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 # brew package
 ###################################################
 formula=(openssl autoconf automake)
-
-if hasCmd 'wget'; then
-  formula+=(wget)
-fi
-
-if hasCmd 'git'; then
-  formula+=(git)
-fi
+formula+=($(installable wget))
+formula+=($(installable git))
+formula+=($(installable tmux))
+formula+=($(installable reattach-to-user-namespace))
 
 for f in $formula
 do

@@ -20,6 +20,7 @@ export COMPLETION_HOME=$SHELL_HOME/completions
 mkdir $BIN_HOME
 ln -s $(absPath .sh.d) $HOME
 ln -s $(absPath .zshrc) $HOME
+ln -s $(absPath .tmux.conf) $HOME
 mkdir $SHELL_HOME/temp
 mkdir $COMPLETION_HOME
 mkdir $SHELL_HOME/export
