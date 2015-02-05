@@ -35,5 +35,6 @@ case ${OSTYPE} in
     source install_rbenv.zsh
     ;;
   linux*)  
+    source linux/install.zsh
     ;;
 esac
