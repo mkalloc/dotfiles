@@ -26,6 +26,7 @@ ln -fbs $(absPath .emacs.d) $HOME
 mkdir $SHELL_HOME/temp
 mkdir $COMPLETION_HOME
 mkdir $SHELL_HOME/export
+mkdir $SHELL_HOME/other_sources
 cp -u .gitconfig $HOME/
 
 # os
