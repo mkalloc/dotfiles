@@ -19,7 +19,10 @@
 ;;color
 (setq font-lock-maximum-decoration t)
 (global-font-lock-mode 1)
-
+;;補完
+(require 'auto-complete)
+(require 'auto-complete-config)
+(global-auto-complete-mode t)
 ;;utf-8
 (prefer-coding-system 'utf-8-unix)
 
