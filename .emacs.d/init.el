@@ -13,7 +13,6 @@
   '(
     init-loader
     auto-complete
-    ruby-electric
     ruby-block
     ruby-end
     ))
