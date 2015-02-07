@@ -13,6 +13,9 @@
   '(
     init-loader
     auto-complete
+    ruby-electric
+    ruby-block
+    ruby-end
     ))
 
 (let ((not-installed (loop for x in installing-package-list
