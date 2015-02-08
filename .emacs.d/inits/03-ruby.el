@@ -1,9 +1,9 @@
-(autoload 'enh-ruby-mode "enh-ruby-mode"
+(autoload 'ruby-mode "ruby-mode"
   "Mode for editing ruby source files" t)
-(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.ru$" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
-(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
+(add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
 
 
 (setq ruby-deep-indent-paren-style nil)
@@ -23,7 +23,7 @@
       (when (> offset 0) (forward-char offset)))))
 
 (require 'ruby-end)
-(add-hook 'enh-ruby-mode-hook
+(add-hook 'ruby-mode-hook
           '(lambda ()
              (abbrev-mode 1)
              (electric-pair-mode t)

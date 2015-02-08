@@ -13,7 +13,6 @@
   '(
     init-loader
     auto-complete
-    enh-ruby-mode
     ruby-block
     ruby-end
     ))
