@@ -44,5 +44,10 @@
 ;;utf-8
 (prefer-coding-system 'utf-8-unix)
 
+;; auto chmod +x
+(add-hook 'after-save-hook
+          'executable-make-buffer-file-executable-if-script-p)
+
 (require 'tramp)
 (setq tramp-default-method "scp")
+
