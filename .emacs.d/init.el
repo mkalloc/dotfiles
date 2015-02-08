@@ -17,6 +17,7 @@
     ruby-end
     auto-highlight-symbol
     exec-path-from-shell
+    go-mode
     ))
 
 (let ((not-installed (loop for x in installing-package-list
