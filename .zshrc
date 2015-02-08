@@ -20,7 +20,7 @@ msource (){
 
 # export
 ###################################################
-msource $SHELL_HOME/export
+msource $SHELL_HOME/export/*.zsh
 
 # os dependence
 ###################################################
