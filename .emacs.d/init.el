@@ -15,6 +15,7 @@
     auto-complete
     ruby-block
     ruby-end
+    auto-highlight-symbol
     ))
 
 (let ((not-installed (loop for x in installing-package-list
