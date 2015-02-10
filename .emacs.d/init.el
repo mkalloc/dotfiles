@@ -1,7 +1,11 @@
-(let ((default-directory (expand-file-name "~/.emacs.d/site-lisp")))
-  (add-to-list 'load-path default-directory)
-  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-      (normal-top-level-add-subdirs-to-load-path)))
+(defun add-to-load-path (&rest paths)
+  (let (path)
+    (dolist (path paths paths)
+      (let ((default-directory (expand-file-name (concat user-emacs-directory path))))
+        (add-to-list 'load-path default-directory)
+        (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
+            (normal-top-level-add-subdirs-to-load-path))))))
+(add-to-load-path "site-lisp")
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
@@ -18,6 +22,8 @@
     auto-highlight-symbol
     exec-path-from-shell
     go-mode
+    go-autocomplete
+    go-eldoc
     ))
 
 (let ((not-installed (loop for x in installing-package-list
