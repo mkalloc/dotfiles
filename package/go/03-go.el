@@ -1,0 +1,20 @@
+(require 'go-mode)
+(add-hook 'go-mode-hook
+          '(lambda()
+             (load (expand-file-name (concat (getenv "GOPATH") "/src/github.com/dougm/goflymake/go-flymake")))
+             (require 'go-flymake)
+             (require 'go-autocomplete)
+             (require 'go-eldoc)
+             (go-eldoc-setup)
+             (set-face-attribute 'eldoc-highlight-function-argument nil
+                                 :underline t :foreground "green"
+                                 :weight 'bold)
+             (highlight-regexp "\\<err\\>" 'hi-red-b)
+             (setq c-basic-offset 4)
+             (setq indent-tabs-mode t)
+             (local-set-key (kbd "M-.") 'godef-jump)
+             (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)
+             (local-set-key (kbd "C-c i") 'go-goto-imports)
+             (local-set-key (kbd "C-c d") 'godoc)
+             (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)))
+(add-hook 'before-save-hook 'gofmt-before-save)

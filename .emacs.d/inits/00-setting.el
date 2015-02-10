@@ -1,3 +1,8 @@
+;;path
+(require 'exec-path-from-shell)
+(let ((envs '("PATH" "GOPATH")))
+  (exec-path-from-shell-copy-envs envs))
+
 ;;delete keybind
 (global-set-key "\C-h" 'delete-backward-char)
 
@@ -23,6 +28,7 @@
 (require 'auto-complete)
 (require 'auto-complete-config)
 (global-auto-complete-mode t)
+
 ;;現在行をハイライト
 (defface hlline-face
   '((((class color)
