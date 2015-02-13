@@ -24,6 +24,8 @@
     go-mode
     go-autocomplete
     go-eldoc
+    slime
+    ac-slime
     ))
 
 (let ((not-installed (loop for x in installing-package-list
