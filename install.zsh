@@ -15,6 +15,7 @@ absPath(){
 export BIN_HOME=$HOME/bin
 export SHELL_HOME=$HOME/.sh.d
 export COMPLETION_HOME=$SHELL_HOME/completions
+export SHELL_HOME_REPO=$(pwd)
 
 # set static file
 mkdir $BIN_HOME
@@ -42,3 +43,6 @@ esac
 
 # invoke
 . ~/.zshrc
+
+# set export
+add-export SHELL_HOME_REPO=$SHELL_HOME_REPO
