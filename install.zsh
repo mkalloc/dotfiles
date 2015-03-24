@@ -39,3 +39,6 @@ case ${OSTYPE} in
     source linux/install.zsh
     ;;
 esac
+
+# invoke
+. ~/.zshrc
