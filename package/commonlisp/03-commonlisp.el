@@ -13,6 +13,7 @@
           '(lambda ()
              (unless (get-buffer "*slime-repl sbcl*")
                  (progn
+                   (switch-to-buffer (buffer-name))
                    (setq inferior-lisp-program "sbcl")
                    (slime-mode)
                    (slime-setup '(slime-repl slime-fancy slime-banner))
