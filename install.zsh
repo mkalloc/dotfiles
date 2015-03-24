@@ -18,16 +18,16 @@ export COMPLETION_HOME=$SHELL_HOME/completions
 
 # set static file
 mkdir $BIN_HOME
-ln -fbs $(absPath .sh.d) $HOME
-ln -fbs $(absPath .zshrc) $HOME
-ln -fbs $(absPath .tmux.conf) $HOME
-ln -fbs $(absPath .emacs) $HOME
-ln -fbs $(absPath .emacs.d) $HOME
+ln -fs $(absPath .sh.d) $HOME
+ln -fs $(absPath .zshrc) $HOME
+ln -fs $(absPath .tmux.conf) $HOME
+ln -fs $(absPath .emacs) $HOME
+ln -fs $(absPath .emacs.d) $HOME
 mkdir $SHELL_HOME/temp
 mkdir $COMPLETION_HOME
 mkdir $SHELL_HOME/export
 mkdir $SHELL_HOME/other_sources
-cp -u .gitconfig $HOME/
+cp .gitconfig $HOME/
 
 # os
 case ${OSTYPE} in
