@@ -22,6 +22,11 @@ msource (){
 ###################################################
 msource $SHELL_HOME/export/*.zsh
 
+# add-export
+if [ -d "$SHELL_HOME/export/add-export" ]; then
+  msource $SHELL_HOME/export/add-export/*.zsh
+fi
+
 # os dependence
 ###################################################
 msource $SHELL_HOME/os/*.zsh
